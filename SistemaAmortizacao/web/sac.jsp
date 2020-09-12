@@ -18,19 +18,39 @@
         <title>JSP Page</title>
     </head>
     <body>
-        <h4><a href="index.jsp">Voltar</a></h4>
+        <%@include file="WEB-INF/jspf/menu.jspf"%>
+        
         <h1>Amortização Constante - SAC</h1>
         
         <form>
-            Insira o saldo devedor a ser financiado:
-            <input type="number" name="saldodev"/><br>
+            <table>
+                <tr>
+                    <td>
+                        Insira o saldo devedor a ser financiado:
+                    </td>
+                    <td>
+                        <input type="number" name="saldodev"/>
+                    <td>
+                </tr>
+                <tr>
+                    <td>
+                    Insira o numero de parcelas:
+                    </td>
+                    <td>
+                    <input type="number" name="nparcela"/><br>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                    Insira a taxa de juros:
+                    </td>
+                    <td>
+                    <input type="number" name="taxaj"/><br>
+                    </td>      
+                </tr>    
+            </table>    
             
-            Insira o numero de parcelas:
-            <input type="number" name="nparcela"/><br>
-            
-            Insira a taxa de juros:
-            <input type="number" name="taxaj"/><br>
-            <input type="submit" name="Calcular"/><br>      
+            <button type="submit" class="btn btn-dark">Calcular</button>
         </form>
         
         <% 
@@ -66,7 +86,7 @@
         <div>
         <%-- Tabela --%>
        
-            <table class ="table" border ="1"  > 
+        <table class ="table" border ="1" > 
                 <thead class="thead-dark"> <%-- Estilo da tabela --%>
                 <tr>
                     <th scope="col">Mês</th>

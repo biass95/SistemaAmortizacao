@@ -10,3 +10,23 @@ h1 {
     margin-bottom: 15px;
 }
 
+td {
+    width: 400px;
+}
+
+
+table {
+    max-width: 1200px;
+    margin-left: 50px;
+}
+
+button {
+    margin-left: 50px;
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+input {
+    width: 100px;
+}
+

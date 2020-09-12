@@ -9,6 +9,8 @@
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <%@include file="WEB-INF/jspf/header-references.jspf"%>
+        
         <title>Sistemas de Amortização</title>
     </head>
     <body>
@@ -22,5 +24,6 @@
         
         <h2><a href="sac.jsp">SAC - Sistema de Amortização Constante</a></h2>
         <h2><a href="saa.jsp">SAA - Sistema de Amortização Americano</a></h2>
+        <%@include file="WEB-INF/jspf/body-scripts.jspf"%>
     </body>
 </html>

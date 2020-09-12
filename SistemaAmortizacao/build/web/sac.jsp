@@ -4,6 +4,7 @@
     Author     : biancasobral
 --%>
 
+<%@page import="java.text.DecimalFormat"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
  <% 
@@ -12,6 +13,8 @@
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <%@include file="WEB-INF/jspf/header-references.jspf"%>
+
         <title>JSP Page</title>
     </head>
     <body>
@@ -50,59 +53,60 @@
             taxaj = 0;
             };
             
-            if (saldodev < 0){
-                saldodev = 0;
-            }
+            DecimalFormat df = new DecimalFormat("#,###.00");
+
                 
             //Formulas:       
                 /*mortizacao = (saldodev / nparcela);
                 juros = (taxaj * saldodev);
                 parcelaAtual = (juros + amortizacao);*/
         %>
-       
+        <div>
         <%-- Tabela --%>
-        <table border ="1" >
-            <tr>
-                <th>Mês</th>
-                <th>Prestação</th>
-                <th>Juros</th>
-                <th>Amortização</th>
-                <th>Saldo Dev.</th>
-            </tr>
-            <%-- Checagem de retorno nulo ou inválido --%>
-            <% if (request.getParameter("nparcela") == null){ %>
-            <tr><td colspan="5">Não há parâmetros</td></tr>
-            <% } else  if(requestException!=null){%>
-            <tr><td colspan="2">Parâmetro Inválido</td></tr>
-            <%}%> 
-            
-            <%--Calculo da amortizacao constante --%>
-            <% double amortizacao = (saldodev/nparcela);%>
-            
-            <% for (int i = 0; i <= (nparcela - 1) ; i ++) { %>
-            <tr>  
-                <%--Mês --%>
-                <td><%= i %></td>
-                
-                <%--Prestaçao --%>
-                <% double juros = (taxaj * saldodev);%>
-                <td><%= amortizacao + juros %></td>
-                
-                <%--Juros--%>
-                <td><%= juros %></td>
-                
-                <%--Amortização --%>
-                <td><%= amortizacao %></td>
-                
-                <%--Saldo devedor --%>
-                    <%= saldodev = (saldodev - ((taxaj * saldodev) + amortizacao))%>
-                      <% if (saldodev < 0) { // Tratamento de valor negativo.
-                        saldodev = 0.0;
-                    } %>
-                    <td><%= saldodev %></td>       
-            </tr>
-           <%} %>
-        </table>
+            <table border ="1" >
+                <tr>
+                    <th>Mês</th>
+                    <th>Prestação</th>
+                    <th>Juros</th>
+                    <th>Amortização</th>
+                    <th>Saldo Dev.</th>
+                </tr>
+                <%-- Checagem de retorno nulo ou inválido --%>
+                <% if (request.getParameter("nparcela") == null){ %>
+                <tr><td colspan="5">Não há parâmetros</td></tr>
+                <% } else  if(requestException!=null){%>
+                <tr><td colspan="2">Parâmetro Inválido</td></tr>
+                <%}%> 
+
+                <%--Calculo da amortizacao constante --%>
+                <% double amortizacao = (saldodev/nparcela);%>
+
+                <% for (int i = 0; i <= (nparcela - 1) ; i ++) { %>
+                <tr>  
+                    <%--Mês --%>
+                    <td><%= i %></td>
+
+                    <%--Prestaçao --%>
+                    <% double juros = (taxaj * saldodev);%>
+                    <td><%= df.format(amortizacao + juros) %></td>
+
+                    <%--Juros--%>
+                    <td><%= df.format(juros) %></td>
+
+                    <%--Amortização --%>
+                    <td><%= df.format(amortizacao) %></td>
+
+                    <%--Saldo devedor --%>
+                    <script><%= saldodev = (saldodev - ((taxaj * saldodev) + amortizacao))%>
+                              <% if (saldodev < 0) { // Tratamento de valor negativo.
+                                saldodev = 0;
+                    } %></</script>
+                        <td><%= df.format(saldodev) %></td>       
+                </tr>
+               <%} %>
+            </table>
+        </div>
+        <%@include file="WEB-INF/jspf/body-scripts.jspf"%>
     </body>
 </html>
 

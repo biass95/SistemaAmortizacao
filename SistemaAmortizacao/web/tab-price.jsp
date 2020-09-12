@@ -1,7 +1,7 @@
 <%-- 
     Document   : tab-price
     Created on : 7 de set de 2020, 01:32:40
-    Author     : biancasobral
+    Author     : Danilo Saravy
 --%>
 
 <%@page contentType="text/html" pageEncoding="UTF-8"%>

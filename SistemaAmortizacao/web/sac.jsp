@@ -24,11 +24,13 @@
         <form>
             Insira o saldo devedor a ser financiado:
             <input type="number" name="saldodev"/><br>
+            
             Insira o numero de parcelas:
             <input type="number" name="nparcela"/><br>
+            
             Insira a taxa de juros:
             <input type="number" name="taxaj"/><br>
-            <input type="submit" name="Calcular"/><br>              
+            <input type="submit" name="Calcular"/><br>      
         </form>
         
         <% 
@@ -63,13 +65,15 @@
         %>
         <div>
         <%-- Tabela --%>
-            <table border ="1" >
+       
+            <table class ="table" border ="1"  > 
+                <thead class="thead-dark"> <%-- Estilo da tabela --%>
                 <tr>
-                    <th>Mês</th>
-                    <th>Prestação</th>
-                    <th>Juros</th>
-                    <th>Amortização</th>
-                    <th>Saldo Dev.</th>
+                    <th scope="col">Mês</th>
+                    <th scope="col">Prestação</th>
+                    <th scope="col">Juros</th>
+                    <th scope="col">Amortização</th>
+                    <th scope="col">Saldo Devedor</th>
                 </tr>
                 <%-- Checagem de retorno nulo ou inválido --%>
                 <% if (request.getParameter("nparcela") == null){ %>
@@ -82,7 +86,8 @@
                 <% double amortizacao = (saldodev/nparcela);%>
 
                 <% for (int i = 0; i <= (nparcela - 1) ; i ++) { %>
-                <tr>  
+                
+                <tr scope="row">  
                     <%--Mês --%>
                     <td><%= i %></td>
 
@@ -105,7 +110,7 @@
                 </tr>
                <%} %>
             </table>
-        </div>
+     
         <%@include file="WEB-INF/jspf/body-scripts.jspf"%>
     </body>
 </html>

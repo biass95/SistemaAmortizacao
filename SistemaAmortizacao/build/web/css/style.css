@@ -14,7 +14,6 @@ td {
     width: 400px;
 }
 
-
 table {
     max-width: 1200px;
     margin-left: 50px;
@@ -26,7 +25,8 @@ button {
     margin-bottom: 30px;
 }
 
-input {
+input{
     width: 100px;
 }
+
 

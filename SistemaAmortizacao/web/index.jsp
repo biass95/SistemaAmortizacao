@@ -34,7 +34,7 @@
 
         <p>Dinâmica de grupo: Os sistemas SAC,SAA e Tabela Price, foram desenvolvidos 
            respectivamente pelos integrantes do grupo:         
-           Bianca Sobral, Aline e Danilo Saravy
+           Bianca Sobral, Aline e Danilo Saravy.
         </p>
         
         

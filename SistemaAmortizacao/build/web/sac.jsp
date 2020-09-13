@@ -48,10 +48,11 @@
                     <input type="number" name="taxaj"/><br>
                     </td>      
                 </tr>    
-            </table>    
-            
-            <button type="submit" class="btn btn-dark">Calcular</button>
+            </table>     
+            <button type="submit" class=" btn btn-dark ">Calcular</button> 
         </form>
+        
+        
         
         <% 
             // Declaracao das variaveis de entrada

@@ -80,9 +80,9 @@
 
                 
             //Formulas:       
-                /*mortizacao = (saldodev / nparcela);
-                juros = (taxaj * saldodev);
-                parcelaAtual = (juros + amortizacao);*/
+                /*mortizacao = saldo devedor inicial;
+                juros = (taxaj * saldodev) = constante
+                parcelaAtual = juros */
         %>
         <div>
         <%-- Tabela --%>
@@ -103,7 +103,7 @@
                 <td colspan="2">Parâmetro Inválido</td></tr>
                 <%} else { %> 
 
-                <%--Calculo da amortizacao constante --%>
+                <%--Calculo da amortizacao --%>
                 <% double amortizacao = (saldodev/nparcela);%>
 
                 <% for (int i = 0; i <= (nparcela) ; i ++) { %>

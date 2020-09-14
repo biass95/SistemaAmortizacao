@@ -98,17 +98,17 @@
                 </tr>
                 <%-- Checagem de retorno nulo ou inválido --%>
                 <% if (request.getParameter("nparcela") == null){ %>
-                <tr><td colspan="5">Não há parâmetros</td></tr>
+                <td colspan="5">Não há parâmetros</td>
                 <% } else  if(requestException!=null){%>
-                <tr><td colspan="2">Parâmetro Inválido</td></tr>
-                <%}%> 
+                <td colspan="2">Parâmetro Inválido</td></tr>
+                <%} else { %> 
 
                 <%--Calculo da amortizacao constante --%>
                 <% double amortizacao = (saldodev/nparcela);%>
 
-                <% for (int i = 0; i <= (nparcela - 1) ; i ++) { %>
+                <% for (int i = 0; i <= (nparcela) ; i ++) { %>
                 
-                <tr scope="row">  
+                <tr>  
                     <%--Mês --%>
                     <td><%= i %></td>
 
@@ -130,7 +130,9 @@
                         <td><%= df.format(saldodev) %></td>       
                 </tr>
                <%} %>
+               <%       }%>
             </table>
+            
      
         <%@include file="WEB-INF/jspf/body-scripts.jspf"%>
     </body>

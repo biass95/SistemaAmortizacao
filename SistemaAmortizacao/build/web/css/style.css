@@ -13,6 +13,9 @@ h1 {
 td {
     width: 400px;
 }
+form {
+    width: 1200px;
+}
 
 table {
     max-width: 1200px;

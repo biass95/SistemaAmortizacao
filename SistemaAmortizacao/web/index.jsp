@@ -15,7 +15,8 @@
     </head>
     <body>
         <%@include file="WEB-INF/jspf/menu.jspf"%>
-
+        
+        <section>
         <h1>Sistemas de Amortização</h1>
         <div>
             <p>Nossa equipe é Formada por Aline, Bianca Sobral e Danilo Saravy.
@@ -23,21 +24,23 @@
                 de calcular e exibir os três tipos de operações realizados em 
                 financiamentos:    
             </p>
-            <p><b>Amortização Costante -</b> é caracterizada por um valor fixo 
+            <p><b>Sistema de Amortização Costante -</b> é caracterizada por um valor fixo 
                 obtido pela divisão do valor do saldo devedor inicial(valor a 
                 ser financiado), pelo número de parcelas.
             </p>
-            <p><b>Amortização Americana -</b> (definição)</p>
+            <p><b>Sistema de Amortização Americana -</b> é um tipo de quitação de empréstimo
+                que favorece aqueles que desejam pagar o valor principal através de uma única 
+                parcela, porém os juros devem ser pagos periodicamente ou, dependendo do contrato 
+                firmado entre as partes, os juros são capitalizados e pagos junto ao valor principal. 
+            </p> 
             
             <p><b>Tabela Price -</b> (definição)</p>
         </div>
 
-        <p>Dinâmica de grupo: Os sistemas SAC,SAA e Tabela Price, foram desenvolvidos 
-           respectivamente pelos integrantes do grupo:         
-           Bianca Sobral, Aline e Danilo Saravy.
+        <p>Dinâmica de grupo: Os sistemas SAC,SAA desenvolvido por Bianca Sobral e Tabela Price por 
+            Danilo Saravy.
         </p>
-        
-        
+        </section>
         <%@include file="WEB-INF/jspf/body-scripts.jspf"%>
     </body>
 </html>

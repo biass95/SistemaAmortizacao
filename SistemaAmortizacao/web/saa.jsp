@@ -20,7 +20,7 @@
     <body>
         <%@include file="WEB-INF/jspf/menu.jspf"%>
         
-        <h1>Amortização Constante - SAC</h1>
+        <h1>Sistema de Amortização Americana - SAA</h1>
         
         <form>
             <table>

@@ -20,7 +20,7 @@
     <body>
         <%@include file="WEB-INF/jspf/menu.jspf"%>
         
-        <h1>Amortização Constante - SAC</h1>
+        <h1>Sistema de Amortização Constante - SAC</h1>
         
         <form>
             <table>
@@ -126,6 +126,8 @@
                     <script><%= saldodev = (saldodev - ((taxaj * saldodev) + amortizacao))%>
                               <% if (saldodev < 0) { // Tratamento de valor negativo.
                                 saldodev = 0;
+                                amortizacao = 0;
+                                juros = 0;
                     } %></</script>
                         <td><%= df.format(saldodev) %></td>       
                 </tr>

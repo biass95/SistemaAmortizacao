@@ -36,10 +36,7 @@
             
             <p><b>Tabela Price -</b> (definição)</p>
         </div>
-
-        <p>Dinâmica de grupo: Os sistemas SAC,SAA desenvolvido por Bianca Sobral e Tabela Price por 
-            Danilo Saravy.
-        </p>
+        
         </section>
         <%@include file="WEB-INF/jspf/body-scripts.jspf"%>
     </body>

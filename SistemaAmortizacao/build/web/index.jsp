@@ -34,7 +34,8 @@
                 firmado entre as partes, os juros são capitalizados e pagos junto ao valor principal. 
             </p> 
             
-            <p><b>Tabela Price -</b> (definição)</p>
+            <p><b>Tabela Price -</b> as prestações serão constantes ou seja a amortização será menor e
+                vai aumentando com o passar do tempo.</p>
         </div>
         
         </section>

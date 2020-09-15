@@ -80,10 +80,7 @@
             DecimalFormat df = new DecimalFormat("#,###.00");
 
                 
-            //Formulas:       
-                /*mortizacao = (saldodev / nparcela);
-                juros = (taxaj * saldodev);
-                parcelaAtual = (juros + amortizacao);*/
+          
         %>
         <div>
         <%-- Tabela --%>

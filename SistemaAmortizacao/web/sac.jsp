@@ -76,7 +76,7 @@
             taxaj = 0;
             };
             
-            DecimalFormat df = new DecimalFormat("#,###.00");
+            DecimalFormat df = new DecimalFormat("R$ #,###.00");
 
                 
             //Formulas:       
